@@ -1,5 +1,5 @@
 {
-  "name": "protobuff-tests",
+  "name": "protobuf-tests",
   "version": "1.0.0",
   "description": "Quick test of the useage of protobuf.js for wire transfer protocol",
   "main": "index.js",
