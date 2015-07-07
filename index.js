@@ -17,13 +17,12 @@ var idGenerator = new IdGen
 var stateBuffer = ByteBuffer.allocate(1024)
 
 function* IdGen () {
-  var id = -1
+  var id = 0
 
-  while (++id < Infinity) yield id
+  while (true) yield id++
 }
 
 var GameStateProto = Protobuf.protoFromFile("GameState.proto")
-var UserBuf = GameStateProto.build("User")
 var GameStateBuf = GameStateProto.build("GameState")
 
 function patch (obj, patch) {
