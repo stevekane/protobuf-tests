@@ -1,0 +1,27 @@
+{
+  "name": "protobuff-tests",
+  "version": "1.0.0",
+  "description": "Quick test of the useage of protobuf.js for wire transfer protocol",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stevekane/protobuf-tests.git"
+  },
+  "keywords": [
+    "protobuf",
+    "javascript"
+  ],
+  "author": "Steve Kane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevekane/protobuf-tests/issues"
+  },
+  "homepage": "https://github.com/stevekane/protobuf-tests#readme",
+  "dependencies": {
+    "clone": "^1.0.2",
+    "protobufjs": "^4.0.0"
+  }
+}

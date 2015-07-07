@@ -1,0 +1,14 @@
+message User {
+  enum State {
+    Active = 0;
+    Inactive = 1;
+  }
+
+  required int32 id = 1;
+  string name = 2;
+  State state = 3;
+}
+
+message GameState {
+  repeated User users = 1;
+}
