@@ -1,7 +1,6 @@
 'use strict'
 
 var Protobuf = require('protobufjs')
-var clone = require('clone')
 var ByteBuffer = Protobuf.ByteBuffer
 
 var log = console.log.bind(console)
@@ -42,16 +41,22 @@ function User (name, state) {
 }
 
 var user = new User("Steve", STATES.Active)
-var users = [user]
+var gameState = {
+  users: [user]
+}
 
 //Update the server's state here
 user.name = "Lynn"
 
-var encoded = encode(stateBuffer, GameStateBuf, users)
-
-var asJson = JSON.stringify(users)
+//on server
+var encoded = encode(stateBuffer, GameStateBuf, gameState)
+var asJson = JSON.stringify(gameState)
 
 log(encoded.byteLength)
 log(Buffer.byteLength(asJson, 'utf-8'))
-log(Buffer.byteLength(asJson, 'ascii'))
 log(GameStateBuf.decode(encoded))
+
+//on client
+var updates = GameStateBuf.decode(encoded)
+log(updates)
+log(gameState)

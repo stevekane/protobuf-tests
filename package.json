@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/stevekane/protobuf-tests#readme",
   "dependencies": {
-    "clone": "^1.0.2",
     "protobufjs": "^4.0.0"
   }
 }
